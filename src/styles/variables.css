@@ -1,0 +1,38 @@
+/* Variáveis CSS baseadas no design do Figma */
+:root {
+  /* Cores do NavBar */
+  --navbar-background: #D9D9D9;
+  --navbar-logo-primary: #FF4D00;
+  --navbar-logo-secondary: #391300;
+  --navbar-white: #FFFFFF;
+  
+  /* Dimensões do NavBar */
+  --navbar-height: 86px;
+  --navbar-width: 100%;
+  --navbar-logo-width: 222px;
+  --navbar-logo-height: 40px;
+  
+  /* Cores do Button */
+  --button-background: #DD6F1B;
+  --button-text-color: #FFFFFF;
+  --button-hover-background: #C45A16;
+  --button-active-background: #B54F12;
+  
+  /* Dimensões do Button */
+  --button-width: 207px;
+  --button-height: 77px;
+  --button-border-radius: 10px;
+  --button-font-size: 20px;
+  --button-font-weight: 400;
+  --button-font-family: 'Inter', sans-serif;
+  
+  /* Footer */
+  --footer-background: var(--navbar-background); /* Reutilizando cor do navbar */
+  --footer-text-color: #000000;
+  --footer-width: 100%; /* Ocupar toda a largura disponível */
+  --footer-height: 99px;
+  --footer-font-family: 'Inter', sans-serif;
+  --footer-font-weight: 400;
+  --footer-font-size: 20px;
+  --footer-line-height: 1.21;
+}
