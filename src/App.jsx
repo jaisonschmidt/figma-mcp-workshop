@@ -1,60 +1,43 @@
-import { Container, Button as BootstrapButton } from 'react-bootstrap';
-import NavBar from './components/NavBar';
-import Button from './components/Button';
-import Footer from './components/Footer';
+import './App.css';
+import profilePhoto from './assets/profile-photo.png';
 
 function App() {
-  const handleButtonClick = (message) => {
-    alert(message);
-  };
-
   return (
-    <>
-      <NavBar />
-      <Container className="py-5">
-        <h1>Projeto de Copilot com MCP!</h1>
-        
-        <div className="mb-4">
-          <h2>Componente Bootstrap Original:</h2>
-          <BootstrapButton>Ja temos alguns componentes!</BootstrapButton>
+    <div className="landing-page">
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="nav-logo">Logo</div>
+        <div className="nav-menu">
+          <a href="#about" className="nav-link">About me</a>
+          <a href="#skills" className="nav-link">Skills</a>
+          <a href="#project" className="nav-link">Project</a>
+          <a href="#contact" className="nav-link">Contact</a>
         </div>
+      </nav>
 
-        <div className="mb-4">
-          <h2>Novo Componente Button (baseado no Figma):</h2>
-          <div className="d-flex flex-wrap gap-3">
-            <Button onClick={() => handleButtonClick('Botão principal clicado!')}>
-              Veja mais
-            </Button>
-            
-            <Button 
-              variant="secondary" 
-              onClick={() => handleButtonClick('Botão secundário clicado!')}
-            >
-              Cancelar
-            </Button>
-            
-            <Button 
-              size="small" 
-              onClick={() => handleButtonClick('Botão pequeno clicado!')}
-            >
-              Pequeno
-            </Button>
-            
-            <Button 
-              size="large" 
-              onClick={() => handleButtonClick('Botão grande clicado!')}
-            >
-              Grande
-            </Button>
-            
-            <Button disabled>
-              Desabilitado
-            </Button>
+      {/* Main Content */}
+      <main className="main-content">
+        <div className="content-left">
+          <h1 className="main-title">Hi! I'm Shiella</h1>
+          <p className="main-description">
+            Lorem ipsum dolor sit amet consectetur. Nunc augue lorem facilisi ac 
+            lorem. Quam scelerisque vulputate proin blandit proin nisl magna 
+            sagittis turpis.
+          </p>
+          <div className="button-group">
+            <button className="btn-primary">Contact me</button>
+            <button className="btn-secondary">See my project</button>
           </div>
         </div>
-      </Container>
-      <Footer />
-    </>
+        
+        <div className="content-right">
+          <div className="photo-container">
+            <div className="photo-blur-bg"></div>
+            <img src={profilePhoto} alt="Shiella" className="profile-photo" />
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }
 
